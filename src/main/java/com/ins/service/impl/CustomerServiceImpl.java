@@ -19,7 +19,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Customer customer(String customerId) {		
+	public Customer getCustomerById(String customerId) {		
 		return customerDao.getCustomerById(customerId);
 	}
 

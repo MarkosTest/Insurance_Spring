@@ -6,5 +6,5 @@ public interface CustomerService {
 
 	boolean saveCustomer(Customer customer);
 	
-	Customer customer(String customerId);
+	Customer getCustomerById(String customerId);
 }

@@ -1,5 +1,6 @@
 package com.ins.dao.impl;
 
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -44,7 +45,9 @@ public class CustomerDaoImpl implements CustomerDao{
 		Customer customer = null;
 		try{
 			session = sessionFactory.openSession();
-			 customer = (Customer) session.get(Customer.class, customerId);			 
+			customer = (Customer) session.get(Customer.class, customerId);
+			//TODO get lazy loading
+			Hibernate.initialize(customer.getCustomerRelatives());
 		} 
 		catch(Exception e){
 			e.printStackTrace();

@@ -48,7 +48,7 @@ public class Customer implements Serializable {
 
 	//bi-directional many-to-one association to CustomerRelative
 	@OneToMany(mappedBy="customer")
-	private List<CustomerRelative> customerRelatives;
+	private List<CustomerRelative> customerRelatives = null;
 
 	public Customer() {
 	}
