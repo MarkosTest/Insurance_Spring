@@ -47,7 +47,8 @@ public class CustomerDaoImpl implements CustomerDao{
 			session = sessionFactory.openSession();
 			customer = (Customer) session.get(Customer.class, customerId);
 			//TODO get lazy loading
-			Hibernate.initialize(customer.getCustomerRelatives());
+			if(customer != null)
+				Hibernate.initialize(customer.getCustomerRelatives());
 		} 
 		catch(Exception e){
 			e.printStackTrace();

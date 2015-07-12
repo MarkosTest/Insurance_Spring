@@ -7,4 +7,6 @@ public interface CustomerService {
 	boolean saveCustomer(Customer customer);
 	
 	Customer getCustomerById(String customerId);
+	
+	String createCustomer();
 }

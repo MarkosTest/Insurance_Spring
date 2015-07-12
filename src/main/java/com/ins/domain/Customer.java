@@ -1,7 +1,9 @@
 package com.ins.domain;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -46,7 +48,7 @@ public class Customer implements Serializable {
 
 	private String telephone;
 
-	//bi-directional many-to-one association to CustomerRelative
+	//TODO es pregunta o afirmacion? bi-directional many-to-one association to CustomerRelative
 	@OneToMany(mappedBy="customer")
 	private List<CustomerRelative> customerRelatives = null;
 
